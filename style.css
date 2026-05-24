@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'Luna';
+  src: url('assets/fonts/Luna.ttf') format('truetype');
+}
+
+[v-cloak] {
+  display: none;
+}
+
+body {
+  background-image: url('assets/bg-totoro.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #2b4f3b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  width: 100%;
+  max-width: 800px;
+}
+
+h1.main-title {
+  font-family: 'Luna', cursive;
+  color: #a8e6cf;
+  text-align: center;
+  font-size: 2.6rem; 
+  white-space: nowrap;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.accordion {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+#headingOne .accordion-button { background-image: url('assets/acc-bg1.png'); }
+#headingTwo .accordion-button { background-image: url('assets/acc-bg2.png'); }
+#headingThree .accordion-button { background-image: url('assets/acc-bg3.png'); }
+#headingFour .accordion-button { background-image: url('assets/acc-bg4.png'); }
+#headingFive .accordion-button { background-image: url('assets/acc-bg5.png'); }
+
+.accordion-button {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px; 
+  border: none !important;
+  border-radius: 0 !important;
+  font-family: 'Luna', cursive;
+  font-size: 1.5rem;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.accordion-button::after {
+  display: none !important;
+}
+
+.accordion-button.collapsed {
+  color: #fbd46d !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0b215e !important;
+  background-color: transparent !important; 
+  box-shadow: none !important;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.95) !important;
+}
+
+.accordion-button:hover,
+.accordion-button:focus,
+.accordion-button:active {
+  color: #a8e6cf !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95) !important;
+}
+
+.accordion-body {
+  background-color: #fff4e6;
+  color: #333;
+  padding: 25px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.place-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.place-card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.place-card.selected {
+  border-color: #198754;
+  background-color: #e8f5e9;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.generate-btn {
+  background-color: #2e8b57;
+  color: white;
+  font-family: 'Luna', cursive;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+  background-color: #1e613b;
+}
+
+.general-error-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.summary-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.summary-card h2 {
+  color: #198754;
+  font-weight: bold;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-section {
+  margin-bottom: 20px;
+}
+
+.summary-section h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.places-error-box{
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
